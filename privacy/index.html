@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Политика конфиденциальности | Samhan</title>
+<meta name="description" content="Политика конфиденциальности сайта Samhan: какие данные мы собираем через форму заявки и как их используем.">
+<link rel="canonical" href="https://samhan.ru/privacy/">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { primary:'#1F2937', secondary:'#9CA3AF', accent:'#C59D5F', background:'#F9FAFB', text:'#111827', muted:'#D1D5DB' },
+    fontFamily: { heading:['Montserrat','sans-serif'], body:['Inter','sans-serif'], mono:['Fira Code','monospace'] },
+    borderRadius: { sm:'0.25rem', md:'0.5rem', lg:'1rem', full:'9999px' },
+  } } }
+</script>
+<link rel="stylesheet" href="../assets/css/main.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer src="../assets/js/main.js"></script>
+</head>
+<body class="font-body bg-background text-text">
+
+<header data-site-header class="site-header fixed top-0 inset-x-0 z-50" x-data="{ open: false }">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="../index.html" class="logo-mark font-heading font-extrabold text-2xl tracking-tight">Samhan<span class="text-accent">.</span></a>
+    <nav class="hidden lg:flex items-center gap-9">
+      <a href="../index.html" class="nav-link">Главная</a>
+      <a href="../services/index.html" class="nav-link">Услуги</a>
+      <a href="../projects/index.html" class="nav-link">Проекты</a>
+      <a href="../about/index.html" class="nav-link">О нас</a>
+      <a href="../contact/index.html" class="nav-link">Контакты</a>
+    </nav>
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="tel:+78001234567" class="flex items-center gap-2 font-heading text-sm font-semibold">
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +7 (800) 123-45-67
+      </a>
+      <a href="../contact/index.html" class="btn btn-accent">Бесплатный замер</a>
+    </div>
+    <button @click="open = !open" class="lg:hidden logo-mark" aria-label="Открыть меню" :aria-expanded="open">
+      <svg x-show="!open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg x-show="open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div x-show="open" x-transition.origin.top @click.outside="open=false" class="lg:hidden bg-primary text-white px-6 pb-8 pt-2" style="display:none">
+    <nav class="flex flex-col gap-1">
+      <a href="../index.html" class="py-3 border-b border-white/10 font-heading font-medium">Главная</a>
+      <a href="../services/index.html" class="py-3 border-b border-white/10 font-heading font-medium">Услуги</a>
+      <a href="../projects/index.html" class="py-3 border-b border-white/10 font-heading font-medium">Проекты</a>
+      <a href="../about/index.html" class="py-3 border-b border-white/10 font-heading font-medium">О нас</a>
+      <a href="../contact/index.html" class="py-3 border-b border-white/10 font-heading font-medium">Контакты</a>
+    </nav>
+    <a href="tel:+78001234567" class="mt-5 flex items-center gap-2 font-heading font-semibold">+7 (800) 123-45-67</a>
+    <a href="../contact/index.html" class="btn btn-accent w-full mt-4">Бесплатный замер</a>
+  </div>
+</header>
+
+<section class="relative bg-primary text-white overflow-hidden pt-20">
+  <div class="absolute inset-0 opacity-40" style="background-image:url('../assets/images/visuals/pattern.svg'); background-size:220px;"></div>
+  <div class="relative max-w-4xl mx-auto px-6 lg:px-10 py-20">
+    <nav class="text-white/50 text-sm mb-6 font-heading" aria-label="Хлебные крошки"><a href="../index.html" class="hover:text-accent">Главная</a> / <span class="text-white/80">Политика конфиденциальности</span></nav>
+    <div class="slat-divider mb-6"><span></span><span></span><span></span></div>
+    <h1 class="font-heading font-extrabold text-3xl lg:text-4xl leading-tight">Политика конфиденциальности</h1>
+    <p class="text-white/60 text-sm mt-4">Действует с 5 июля 2026 года</p>
+  </div>
+</section>
+
+<section class="py-20 lg:py-24">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 prose-content">
+    <div class="space-y-10 text-[15px] leading-relaxed text-text">
+      <div data-reveal>
+        <h2 class="font-heading font-bold text-xl text-primary mb-3">1. Общие положения</h2>
+        <p class="text-secondary">Настоящая политика описывает, какие данные Samhan («мы», «компания») получает от посетителей сайта samhan.ru и как эти данные используются. Используя сайт и оставляя заявку, вы соглашаетесь с условиями, описанными ниже.</p>
+      </div>
+      <div data-reveal>
+        <h2 class="font-heading font-bold text-xl text-primary mb-3">2. Какие данные мы собираем</h2>
+        <p class="text-secondary mb-3">При заполнении формы заявки на сайте мы можем запрашивать:</p>
+        <ul class="list-disc pl-6 text-secondary space-y-1">
+          <li>имя;</li>
+          <li>номер телефона;</li>
+          <li>интересующую услугу и комментарий к заявке.</li>
+        </ul>
+      </div>
+      <div data-reveal>
+        <h2 class="font-heading font-bold text-xl text-primary mb-3">3. Цели обработки данных</h2>
+        <p class="text-secondary">Данные, полученные через форму, используются исключительно для обратной связи с клиентом: уточнения деталей заказа, согласования времени бесплатного замера и консультации по услугам компании.</p>
+      </div>
+      <div data-reveal>
+        <h2 class="font-heading font-bold text-xl text-primary mb-3">4. Передача данных третьим лицам</h2>
+        <p class="text-secondary">Мы не передаём и не продаём персональные данные посетителей сайта третьим лицам, за исключением случаев, предусмотренных законодательством Российской Федерации.</p>
+      </div>
+      <div data-reveal>
+        <h2 class="font-heading font-bold text-xl text-primary mb-3">5. Хранение и защита данных</h2>
+        <p class="text-secondary">Компания принимает разумные организационные и технические меры для защиты полученных данных от несанкционированного доступа, изменения или удаления.</p>
+      </div>
+      <div data-reveal>
+        <h2 class="font-heading font-bold text-xl text-primary mb-3">6. Права пользователя</h2>
+        <p class="text-secondary">Вы можете запросить уточнение, изменение или удаление предоставленных данных, написав на почту <a href="mailto:info@samhan.ru" class="text-accent underline">info@samhan.ru</a>.</p>
+      </div>
+      <div data-reveal>
+        <h2 class="font-heading font-bold text-xl text-primary mb-3">7. Изменения политики</h2>
+        <p class="text-secondary">Мы можем обновлять данную политику. Актуальная версия всегда доступна на этой странице.</p>
+      </div>
+      <div data-reveal>
+        <h2 class="font-heading font-bold text-xl text-primary mb-3">8. Контакты</h2>
+        <p class="text-secondary">По вопросам обработки данных обращайтесь по телефону +7 (800) 123-45-67 или на почту <a href="mailto:info@samhan.ru" class="text-accent underline">info@samhan.ru</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-primary text-white pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <div>
+      <a href="../index.html" class="font-heading font-extrabold text-2xl">Samhan<span class="text-accent">.</span></a>
+      <p class="text-white/60 text-sm leading-relaxed mt-4">Изготовление, продажа и установка решений для дома и бизнеса в Грозном и Гудермесе.</p>
+    </div>
+    <div>
+      <h3 class="font-heading font-semibold mb-4 text-sm tracking-wide uppercase text-white/50">Услуги</h3>
+      <ul class="space-y-2 text-sm text-white/75">
+        <li><a href="../services/index.html#blinds" class="hover:text-accent">Жалюзи</a></li>
+        <li><a href="../services/index.html#roller" class="hover:text-accent">Рулонные шторы</a></li>
+        <li><a href="../services/index.html#wardrobe" class="hover:text-accent">Шкафы-купе</a></li>
+        <li><a href="../services/index.html#windows" class="hover:text-accent">Пластиковые окна</a></li>
+        <li><a href="../services/index.html#shutters" class="hover:text-accent">Рольставни и ворота</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-heading font-semibold mb-4 text-sm tracking-wide uppercase text-white/50">Навигация</h3>
+      <ul class="space-y-2 text-sm text-white/75">
+        <li><a href="../about/index.html" class="hover:text-accent">О нас</a></li>
+        <li><a href="../projects/index.html" class="hover:text-accent">Проекты</a></li>
+        <li><a href="../contact/index.html" class="hover:text-accent">Контакты</a></li>
+        <li><a href="../privacy/index.html" class="hover:text-accent">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-heading font-semibold mb-4 text-sm tracking-wide uppercase text-white/50">Контакты</h3>
+      <ul class="space-y-3 text-sm text-white/75">
+        <li><a href="tel:+78001234567" class="hover:text-accent">+7 (800) 123-45-67</a></li>
+        <li><a href="mailto:info@samhan.ru" class="hover:text-accent">info@samhan.ru</a></li>
+        <li>г. Гудермес, пер. Автодромный 2</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-8 border-t border-white/10 flex flex-wrap justify-between gap-4 text-xs text-white/45">
+    <p>© 2026 Samhan. Все права защищены.</p>
+    <p>Сайт разработан студией GrozNet</p>
+  </div>
+</footer>
+
+</body>
+</html>

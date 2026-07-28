@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Услуги — жалюзи, рулонные шторы, шкафы-купе, окна, рольставни | Samhan</title>
+<meta name="description" content="Жалюзи, рулонные шторы, шкафы-купе, пластиковые окна, рольставни и ворота от Samhan. Замер, изготовление и монтаж в Грозном и Гудермесе.">
+<link rel="canonical" href="https://samhan.ru/services/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { primary:'#1F2937', secondary:'#9CA3AF', accent:'#C59D5F', background:'#F9FAFB', text:'#111827', muted:'#D1D5DB' },
+    fontFamily: { heading:['Montserrat','sans-serif'], body:['Inter','sans-serif'], mono:['Fira Code','monospace'] },
+    borderRadius: { sm:'0.25rem', md:'0.5rem', lg:'1rem', full:'9999px' },
+  } } }
+</script>
+<link rel="stylesheet" href="../assets/css/main.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer src="../assets/js/main.js"></script>
+</head>
+<body class="font-body bg-background text-text">
+
+<header data-site-header class="site-header fixed top-0 inset-x-0 z-50" x-data="{ open: false }">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="../index.html" class="logo-mark font-heading font-extrabold text-2xl tracking-tight">Samhan<span class="text-accent">.</span></a>
+    <nav class="hidden lg:flex items-center gap-9">
+      <a href="../index.html" class="nav-link">Главная</a>
+      <a href="../services/index.html" class="nav-link is-active">Услуги</a>
+      <a href="../projects/index.html" class="nav-link">Проекты</a>
+      <a href="../about/index.html" class="nav-link">О нас</a>
+      <a href="../contact/index.html" class="nav-link">Контакты</a>
+    </nav>
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="tel:+78001234567" class="flex items-center gap-2 font-heading text-sm font-semibold">
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +7 (800) 123-45-67
+      </a>
+      <a href="../contact/index.html" class="btn btn-accent">Бесплатный замер</a>
+    </div>
+    <button @click="open = !open" class="lg:hidden logo-mark" aria-label="Открыть меню" :aria-expanded="open">
+      <svg x-show="!open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg x-show="open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div x-show="open" x-transition.origin.top @click.outside="open=false" class="lg:hidden bg-primary text-white px-6 pb-8 pt-2" style="display:none">
+    <nav class="flex flex-col gap-1">
+      <a href="../index.html" class="py-3 border-b border-white/10 font-heading font-medium">Главная</a>
+      <a href="../services/index.html" class="py-3 border-b border-white/10 font-heading font-medium">Услуги</a>
+      <a href="../projects/index.html" class="py-3 border-b border-white/10 font-heading font-medium">Проекты</a>
+      <a href="../about/index.html" class="py-3 border-b border-white/10 font-heading font-medium">О нас</a>
+      <a href="../contact/index.html" class="py-3 border-b border-white/10 font-heading font-medium">Контакты</a>
+    </nav>
+    <a href="tel:+78001234567" class="mt-5 flex items-center gap-2 font-heading font-semibold">+7 (800) 123-45-67</a>
+    <a href="../contact/index.html" class="btn btn-accent w-full mt-4">Бесплатный замер</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative bg-primary text-white overflow-hidden pt-20">
+  <div class="absolute inset-0 opacity-40" style="background-image:url('../assets/images/visuals/pattern.svg'); background-size:220px;"></div>
+  <div class="relative max-w-5xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
+    <nav class="text-white/50 text-sm mb-6 font-heading" aria-label="Хлебные крошки"><a href="../index.html" class="hover:text-accent">Главная</a> / <span class="text-white/80">Услуги</span></nav>
+    <div class="slat-divider mb-6"><span></span><span></span><span></span></div>
+    <p class="eyebrow mb-3">Что мы делаем</p>
+    <h1 class="font-heading font-extrabold text-4xl lg:text-5xl leading-tight mb-6 max-w-3xl">Пять направлений — одна команда от замера до монтажа</h1>
+    <p class="text-white/75 text-lg max-w-2xl">Каждое решение мы изготавливаем по индивидуальным размерам объекта и устанавливаем собственной бригадой — вы получаете предсказуемый срок и одну точку ответственности.</p>
+  </div>
+</section>
+
+<!-- SERVICE 1: BLINDS -->
+<section id="blinds" class="py-24 lg:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-center">
+    <div class="lg:col-span-6 order-2 lg:order-1" data-reveal>
+      <p class="eyebrow mb-3">01 · Жалюзи</p>
+      <h2 class="font-heading font-extrabold text-3xl lg:text-4xl text-primary mb-5">Жалюзи под любой проём</h2>
+      <p class="text-secondary leading-relaxed mb-6">Изготавливаем горизонтальные, вертикальные и рулонные жалюзи для квартир, офисов, витрин и коммерческих помещений. Управление ламелями позволяет точно регулировать освещённость, не закрывая обзор полностью.</p>
+      <ul class="space-y-3 mb-8">
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Горизонтальные ламели 25 и 50 мм, алюминий и дерево</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Вертикальные жалюзи для панорамных окон и офисов</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Управление шнуром, цепочкой или электроприводом</li>
+      </ul>
+      <a href="../contact/index.html" class="btn btn-accent">Рассчитать стоимость</a>
+    </div>
+    <div class="lg:col-span-6 order-1 lg:order-2" data-reveal>
+      <div class="ph-media ph-blinds rounded-md aspect-[4/3] w-full"></div>
+    </div>
+  </div>
+</section>
+
+<div class="slat-seam"><div class="slat" style="top:12px"></div></div>
+
+<!-- SERVICE 2: ROLLER -->
+<section id="roller" class="py-24 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-center">
+    <div class="lg:col-span-6" data-reveal>
+      <div class="ph-media ph-roller rounded-md aspect-[4/3] w-full"></div>
+    </div>
+    <div class="lg:col-span-6" data-reveal>
+      <p class="eyebrow mb-3">02 · Рулонные шторы</p>
+      <h2 class="font-heading font-extrabold text-3xl lg:text-4xl text-primary mb-5">Рулонные шторы и системы солнцезащиты</h2>
+      <p class="text-secondary leading-relaxed mb-6">Компактные рулонные системы для квартир, домов и офисов: от лёгкого рассеивания солнца до полного блэкаута в спальне. Устанавливаются в проём, на створку или проём с выступом.</p>
+      <ul class="space-y-3 mb-8">
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Кассетные системы день-ночь и открытые рулонные</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ткани blackout, светофильтр и полупрозрачные</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Монтаж без сверления профиля на пластиковые окна</li>
+      </ul>
+      <a href="../contact/index.html" class="btn btn-accent">Рассчитать стоимость</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 3: WARDROBE -->
+<section id="wardrobe" class="py-24 lg:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-center">
+    <div class="lg:col-span-6 order-2 lg:order-1" data-reveal>
+      <p class="eyebrow mb-3">03 · Шкафы-купе</p>
+      <h2 class="font-heading font-extrabold text-3xl lg:text-4xl text-primary mb-5">Шкафы-купе и мебельные решения</h2>
+      <p class="text-secondary leading-relaxed mb-6">Проектируем и изготавливаем встроенные шкафы-купе, гардеробные и системы хранения по размерам конкретной комнаты — включая нестандартные ниши и потолки со скосом.</p>
+      <ul class="space-y-3 mb-8">
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Раздвижные и распашные системы, встроенные и корпусные</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Наполнение под задачи: одежда, обувь, бельё, техника</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Фасады: зеркало, ЛДСП, крашеное МДФ, комбинации</li>
+      </ul>
+      <a href="../contact/index.html" class="btn btn-accent">Рассчитать стоимость</a>
+    </div>
+    <div class="lg:col-span-6 order-1 lg:order-2" data-reveal>
+      <div class="ph-media ph-wardrobe rounded-md aspect-[4/3] w-full"></div>
+    </div>
+  </div>
+</section>
+
+<div class="slat-seam"><div class="slat" style="top:12px"></div></div>
+
+<!-- SERVICE 4: WINDOWS -->
+<section id="windows" class="py-24 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-center">
+    <div class="lg:col-span-6" data-reveal>
+      <div class="ph-media ph-windows rounded-md aspect-[4/3] w-full"></div>
+    </div>
+    <div class="lg:col-span-6" data-reveal>
+      <p class="eyebrow mb-3">04 · Пластиковые окна</p>
+      <h2 class="font-heading font-extrabold text-3xl lg:text-4xl text-primary mb-5">Пластиковые окна с профессиональным монтажом</h2>
+      <p class="text-secondary leading-relaxed mb-6">Устанавливаем энергоэффективные ПВХ-окна для квартир, домов и коммерческих объектов — с демонтажом старых конструкций, герметизацией проёма и вывозом мусора.</p>
+      <ul class="space-y-3 mb-8">
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Профили с разным числом камер под климат региона</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Одно-, двух- и трёхкамерные стеклопакеты</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Демонтаж, монтаж, отделка откосов и вывоз мусора</li>
+      </ul>
+      <a href="../contact/index.html" class="btn btn-accent">Рассчитать стоимость</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 5: SHUTTERS -->
+<section id="shutters" class="py-24 lg:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-center">
+    <div class="lg:col-span-6 order-2 lg:order-1" data-reveal>
+      <p class="eyebrow mb-3">05 · Рольставни и ворота</p>
+      <h2 class="font-heading font-extrabold text-3xl lg:text-4xl text-primary mb-5">Рольставни и автоматические ворота</h2>
+      <p class="text-secondary leading-relaxed mb-6">Изготавливаем и монтируем рольставни для окон и витрин, а также автоматические ворота для домов, складов и коммерческих объектов — с электроприводом и защитой от взлома.</p>
+      <ul class="space-y-3 mb-8">
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Рольставни защитные и светонепроницаемые</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Секционные, откатные и распашные ворота</li>
+        <li class="flex gap-3 text-[15px] text-text"><svg class="icon shrink-0 text-accent mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Автоматика с пультом и управлением со смартфона</li>
+      </ul>
+      <a href="../contact/index.html" class="btn btn-accent">Рассчитать стоимость</a>
+    </div>
+    <div class="lg:col-span-6 order-1 lg:order-2" data-reveal>
+      <div class="ph-media ph-shutters rounded-md aspect-[4/3] w-full"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-24 lg:py-28 bg-white">
+  <div class="max-w-4xl mx-auto px-6 lg:px-10">
+    <div class="mb-14" data-reveal>
+      <div class="slat-divider mb-5"><span></span><span></span><span></span></div>
+      <p class="eyebrow mb-3">Частые вопросы</p>
+      <h2 class="font-heading font-extrabold text-3xl lg:text-4xl text-primary leading-tight">Коротко о заказе</h2>
+    </div>
+    <div class="space-y-3" x-data="{ openItem: 1 }">
+      <div class="border border-[#EDEFF2] rounded-md overflow-hidden" data-reveal>
+        <button @click="openItem = openItem === 1 ? null : 1" class="w-full flex items-center justify-between gap-4 p-6 text-left">
+          <span class="font-heading font-semibold text-primary">Сколько стоит бесплатный замер?</span>
+          <svg class="shrink-0 transition-transform" :class="openItem===1 && 'rotate-45'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div x-show="openItem===1" x-collapse class="px-6 pb-6 text-secondary text-[15px] leading-relaxed">Замер по Грозному и Гудермесу ничего не стоит и ни к чему не обязывает — вы получаете точный расчёт и можете принять решение без спешки.</div>
+      </div>
+      <div class="border border-[#EDEFF2] rounded-md overflow-hidden" data-reveal>
+        <button @click="openItem = openItem === 2 ? null : 2" class="w-full flex items-center justify-between gap-4 p-6 text-left">
+          <span class="font-heading font-semibold text-primary">Сколько занимает изготовление и монтаж?</span>
+          <svg class="shrink-0 transition-transform" :class="openItem===2 && 'rotate-45'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div x-show="openItem===2" x-collapse class="px-6 pb-6 text-secondary text-[15px] leading-relaxed">В среднем 5–10 дней с момента замера до установки — точный срок фиксируется в договоре и зависит от объёма заказа.</div>
+      </div>
+      <div class="border border-[#EDEFF2] rounded-md overflow-hidden" data-reveal>
+        <button @click="openItem = openItem === 3 ? null : 3" class="w-full flex items-center justify-between gap-4 p-6 text-left">
+          <span class="font-heading font-semibold text-primary">Даёте ли вы гарантию?</span>
+          <svg class="shrink-0 transition-transform" :class="openItem===3 && 'rotate-45'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div x-show="openItem===3" x-collapse class="px-6 pb-6 text-secondary text-[15px] leading-relaxed">Да, на изготовление и монтаж действует гарантия 2 года — при возникновении неисправности мы приезжаем и устраняем её.</div>
+      </div>
+      <div class="border border-[#EDEFF2] rounded-md overflow-hidden" data-reveal>
+        <button @click="openItem = openItem === 4 ? null : 4" class="w-full flex items-center justify-between gap-4 p-6 text-left">
+          <span class="font-heading font-semibold text-primary">Работаете ли вы с коммерческими объектами?</span>
+          <svg class="shrink-0 transition-transform" :class="openItem===4 && 'rotate-45'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div x-show="openItem===4" x-collapse class="px-6 pb-6 text-secondary text-[15px] leading-relaxed">Да, устанавливаем жалюзи, рольставни, окна и ворота в офисах, магазинах и на складах — как разово, так и по договору на несколько объектов.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 bg-accent text-white relative overflow-hidden" data-reveal>
+  <div class="absolute inset-0 opacity-15" style="background-image:url('../assets/images/visuals/pattern.svg'); background-size:220px;"></div>
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <h2 class="font-heading font-extrabold text-3xl lg:text-4xl mb-5">Не нашли своё решение?</h2>
+    <p class="text-white/85 text-lg mb-9 max-w-xl mx-auto">Опишите задачу — предложим подходящий вариант и приедем на бесплатный замер.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="../contact/index.html" class="btn bg-primary text-white hover:bg-[#111827]">Оставить заявку</a>
+      <a href="tel:+78001234567" class="btn btn-ghost-light">+7 (800) 123-45-67</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-primary text-white pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <div>
+      <a href="../index.html" class="font-heading font-extrabold text-2xl">Samhan<span class="text-accent">.</span></a>
+      <p class="text-white/60 text-sm leading-relaxed mt-4">Изготовление, продажа и установка решений для дома и бизнеса в Грозном и Гудермесе.</p>
+    </div>
+    <div>
+      <h3 class="font-heading font-semibold mb-4 text-sm tracking-wide uppercase text-white/50">Услуги</h3>
+      <ul class="space-y-2 text-sm text-white/75">
+        <li><a href="#blinds" class="hover:text-accent">Жалюзи</a></li>
+        <li><a href="#roller" class="hover:text-accent">Рулонные шторы</a></li>
+        <li><a href="#wardrobe" class="hover:text-accent">Шкафы-купе</a></li>
+        <li><a href="#windows" class="hover:text-accent">Пластиковые окна</a></li>
+        <li><a href="#shutters" class="hover:text-accent">Рольставни и ворота</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-heading font-semibold mb-4 text-sm tracking-wide uppercase text-white/50">Навигация</h3>
+      <ul class="space-y-2 text-sm text-white/75">
+        <li><a href="../about/index.html" class="hover:text-accent">О нас</a></li>
+        <li><a href="../projects/index.html" class="hover:text-accent">Проекты</a></li>
+        <li><a href="../contact/index.html" class="hover:text-accent">Контакты</a></li>
+        <li><a href="../privacy/index.html" class="hover:text-accent">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-heading font-semibold mb-4 text-sm tracking-wide uppercase text-white/50">Контакты</h3>
+      <ul class="space-y-3 text-sm text-white/75">
+        <li><a href="tel:+78001234567" class="hover:text-accent">+7 (800) 123-45-67</a></li>
+        <li><a href="mailto:info@samhan.ru" class="hover:text-accent">info@samhan.ru</a></li>
+        <li>г. Гудермес, пер. Автодромный 2</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-8 border-t border-white/10 flex flex-wrap justify-between gap-4 text-xs text-white/45">
+    <p>© 2026 Samhan. Все права защищены.</p>
+    <p>Сайт разработан студией GrozNet</p>
+  </div>
+</footer>
+
+</body>
+</html>
