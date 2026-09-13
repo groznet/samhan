@@ -1,0 +1,312 @@
+/* ==========================================================================
+   Samhan — Design System
+   Signature motif: the louvre slat. Every blind, roller shade and shutter
+   Samhan makes is built from overlapping bands that turn to control light.
+   That single idea — a stack of bands, tilting to reveal what's behind —
+   is reused as the site's structural device: section dividers, the hero
+   reveal, and the process steps are all literally "slats" opening.
+   ========================================================================== */
+
+:root {
+  --color-primary: #1F2937;
+  --color-secondary: #9CA3AF;
+  --color-accent: #C59D5F;
+  --color-accent-light: #DDBD8A;
+  --color-bg: #F9FAFB;
+  --color-text: #111827;
+  --color-muted: #D1D5DB;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  --slat-gap: 10px;
+  --ease-slat: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, .font-heading {
+  font-family: var(--font-heading);
+}
+
+::selection { background: var(--color-accent); color: #fff; }
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Slat divider — a small stack of horizontal bands used under eyebrows,
+   headings and as a section separator. Reads as a miniature closed blind.
+   -------------------------------------------------------------------------- */
+.slat-divider {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 56px;
+}
+.slat-divider span {
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-light) 60%, transparent 100%);
+  border-radius: 2px;
+}
+.slat-divider span:nth-child(1) { width: 100%; }
+.slat-divider span:nth-child(2) { width: 70%; }
+.slat-divider span:nth-child(3) { width: 40%; }
+
+.slat-divider.center { align-items: center; }
+.slat-divider.center span:nth-child(1) { width: 56px; }
+.slat-divider.center span:nth-child(2) { width: 38px; }
+.slat-divider.center span:nth-child(3) { width: 20px; }
+
+/* Full-width slat section separator between page sections */
+.slat-seam {
+  position: relative;
+  height: 28px;
+  overflow: hidden;
+}
+.slat-seam .slat {
+  position: absolute;
+  left: 0; right: 0;
+  height: 4px;
+  background: var(--color-muted);
+  opacity: .5;
+}
+.slat-seam .slat::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: rgba(255,255,255,.6);
+}
+
+/* --------------------------------------------------------------------------
+   Hero slat reveal — on load, horizontal bands sweep away like an opening
+   blind to expose the hero content underneath.
+   -------------------------------------------------------------------------- */
+.slat-reveal-wrap {
+  position: relative;
+}
+.slat-reveal {
+  position: absolute;
+  left: 0; width: 100%;
+  background: var(--color-primary);
+  z-index: 20;
+  transform-origin: left center;
+  animation: slat-open 900ms var(--ease-slat) forwards;
+  animation-delay: calc(var(--i) * 70ms);
+}
+.slat-reveal::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: rgba(197,157,95,.5);
+}
+@keyframes slat-open {
+  0%   { transform: scaleX(1); opacity: 1; }
+  70%  { opacity: 1; }
+  100% { transform: scaleX(0); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slat-reveal { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: .95rem;
+  letter-spacing: .02em;
+  padding: .85rem 1.6rem;
+  border-radius: 2px;
+  transition: transform .25s var(--ease-slat), box-shadow .25s ease, background-color .25s ease, color .25s ease;
+  white-space: nowrap;
+}
+.btn-accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+.btn-accent:hover {
+  background: #B08849;
+  box-shadow: 0 8px 20px -6px rgba(197,157,95,.55);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  border: 1.5px solid var(--color-muted);
+  color: var(--color-primary);
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+.btn-ghost-light {
+  border: 1.5px solid rgba(255,255,255,.35);
+  color: #fff;
+}
+.btn-ghost-light:hover {
+  background: rgba(255,255,255,.1);
+  border-color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.site-header {
+  color: #fff;
+  transition: background-color .35s ease, box-shadow .35s ease, color .35s ease;
+}
+.site-header .logo-mark { color: #fff; }
+.site-header.is-scrolled {
+  color: var(--color-primary);
+  background-color: rgba(249,250,251,.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(17,24,39,.06);
+}
+.site-header.is-scrolled .logo-mark { color: var(--color-primary); }
+.site-header .btn-outline { border-color: rgba(255,255,255,.4); color: #fff; }
+.site-header.is-scrolled .btn-outline { border-color: var(--color-muted); color: var(--color-primary); }
+
+.nav-link {
+  position: relative;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: .9rem;
+  letter-spacing: .02em;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 2px;
+  background: var(--color-accent);
+  transition: width .3s var(--ease-slat);
+}
+.nav-link:hover::after, .nav-link.is-active::after { width: 100%; }
+
+/* --------------------------------------------------------------------------
+   Cards
+   -------------------------------------------------------------------------- */
+.card-service {
+  background: #fff;
+  border: 1px solid #EDEFF2;
+  transition: transform .35s var(--ease-slat), box-shadow .35s ease, border-color .35s ease;
+}
+.card-service:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -20px rgba(17,24,39,.25);
+  border-color: var(--color-accent-light);
+}
+
+.eyebrow {
+  font-family: var(--font-heading);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* Decorative gradient placeholders standing in for photography.
+   Each variant nods at the product it represents through color + angle,
+   overlaid with a faint slat pattern so empty imagery still fits the motif. */
+.ph-media {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.ph-media::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    180deg, rgba(255,255,255,.07) 0px, rgba(255,255,255,.07) 2px,
+    transparent 2px, transparent 14px
+  );
+}
+.ph-blinds   { background-image: linear-gradient(135deg, #1F2937 0%, #3d4a5c 55%, #C59D5F 140%); }
+.ph-roller   { background-image: linear-gradient(135deg, #2b3543 0%, #6b7686 60%, #DDBD8A 140%); }
+.ph-wardrobe { background-image: linear-gradient(135deg, #1F2937 0%, #4b5768 60%, #9CA3AF 140%); }
+.ph-windows  { background-image: linear-gradient(135deg, #23303f 0%, #56677c 55%, #C59D5F 140%); }
+.ph-shutters { background-image: linear-gradient(135deg, #171f29 0%, #384454 60%, #8b96a6 140%); }
+.ph-hero     { background-image: linear-gradient(120deg, #171f29 0%, #1F2937 45%, #4a3b23 150%); }
+
+/* Testimonial quote mark */
+.quote-mark {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--color-accent-light);
+}
+
+/* Icon sizing helper for /assets/images/visuals/icons/*.svg used as <img> */
+.icon { display: inline-block; flex-shrink: 0; }
+
+/* Form fields */
+.field input, .field textarea, .field select {
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid var(--color-muted);
+  padding: .8rem 1rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  border-radius: 2px;
+  transition: border-color .25s ease;
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+.field label {
+  font-family: var(--font-heading);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  color: var(--color-primary);
+  margin-bottom: .35rem;
+  display: block;
+}
+
+/* Mobile nav panel */
+.mobile-nav-enter { transition: transform .35s var(--ease-slat), opacity .3s ease; }
+
+/* Gentle one-time scroll reveal, driven by main.js IntersectionObserver */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s var(--ease-slat), transform .7s var(--ease-slat);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

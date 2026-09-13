@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <pattern id="slats" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+      <rect width="60" height="60" fill="none"/>
+      <rect x="0" y="0" width="60" height="10" fill="#1F2937" opacity="0.035"/>
+      <rect x="0" y="24" width="60" height="10" fill="#1F2937" opacity="0.035"/>
+      <rect x="0" y="48" width="60" height="10" fill="#1F2937" opacity="0.035"/>
+    </pattern>
+  </defs>
+  <rect width="120" height="120" fill="url(#slats)"/>
+</svg>
